@@ -20,8 +20,6 @@ class _AppState extends State<App> {
 
   @override
   Widget build(BuildContext context) {
-    //MaterialApp: Google
-    //CupertinoApp: Apple
     return MaterialApp(
       home: Scaffold(
         backgroundColor: const Color(0xFFF4EDDB),
@@ -42,7 +40,7 @@ class _AppState extends State<App> {
                 ),
               ),
               IconButton(
-                iconSize: 80,
+                iconSize: 50,
                 onPressed: onClicked,
                 icon: const Icon(Icons.add_box_sharp),
               ),
