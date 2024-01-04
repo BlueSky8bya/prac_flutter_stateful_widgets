@@ -12,12 +12,11 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
-  int counter = 0;
+  List<int> numbers = [];
 
   void onClicked() {
-    // State 클래스에게 데이터가 변경됐다고 알리는 함수
     setState(() {
-      counter = counter + 1;
+      numbers.add(numbers.length);
     });
   }
 
@@ -36,12 +35,7 @@ class _AppState extends State<App> {
                   fontSize: 30,
                 ),
               ),
-              Text(
-                '$counter',
-                style: const TextStyle(
-                  fontSize: 30,
-                ),
-              ),
+              for (var n in numbers) Text('$n'),
               IconButton(
                 iconSize: 50,
                 onPressed: onClicked,
